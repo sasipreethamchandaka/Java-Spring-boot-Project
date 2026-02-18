@@ -6,11 +6,11 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
 
     steps:
     # 1️⃣ Checkout Code
-    - name: Checkout Repository
+    - name: Checkout Repositor
       uses: actions/checkout@v4
 
     # 2️⃣ Setup Java 17
@@ -80,7 +80,7 @@ jobs:
           nohup env \
             MYSQL_HOST=database-1.cde682sy68e9.us-east-1.rds.amazonaws.com \
             MYSQL_PORT=3306 \
-            MYSQL_USERNAME=sasich \
+            MYSQL_USERNAME=sasich123 \
             MYSQL_PASSWORD=sasich123 \
             LOG_FILE_PATH=/var/log/app/datastore.log \
             java -jar datastore-0.0.7.jar \
